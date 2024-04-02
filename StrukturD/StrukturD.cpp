@@ -4,3 +4,9 @@
 #include <iostream>
 using namespace std;
 
+struct mahasisw {
+	string nim;
+	string nama;
+	string alamat;
+	int umur;
+};
