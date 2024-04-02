@@ -1,50 +1,43 @@
 // Strukttur D_4.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
+
 #include <iostream>
 #include <string>
 using namespace std;
 
 struct DetailAlamat {
-	string desa;
-	string kota;
+    string desa;
+    string kota;
 };
+
 struct mahasiswa {
-	string nim;
-	string nama;
-	DetailAlamat alamat;
-	int umur;
+    string nim;
+    string nama;
+    DetailAlamat alamat;
+    int umur;
 };
+
 
 int main() {
-	mahasiswa mhs[3];
+    mahasiswa mhs[3];
+    for (int i = 0; i < 3; i++) {
+        cout << "data ke-" << (i + 1) << ":" << endl;
+        cout << "Nomor mahasiswa :";
+        getline(cin, mhs[i].nim);
+        cout << "Nama mahasiswa :";
+        getline(cin, mhs[i].nama);
 
-	cout << "Nomor Mahasiswa : ";
-	getline(cin, mhs.nama);
-	cin >> mhs.nim;
-	cout << "Nama Mahasiswa : ";
-	getline(cin, mhs.nama);
-
-
-	cout << "Alamat Mahasiswa : " << endl;
-	cout << "\t Nama Desa :";
-	cin >> mhs.alamat.desa;
-	cout << "\t Nama Kota : ";
-	cin >> mhs.alamat.kota;
-
-	cout << "Umur Mahasiswa : ";
-	cin >> mhs.umur;
-
-	cout << endl;
-	cout << "\n NIM : " << mhs.nim;
-	cout << "\n Nama : " << mhs.nama;
-	cout << "\n Alamat : ";
-	cout << "\n Desa : " << mhs.alamat.desa;
-	cout << "\n Kota : " << mhs.alamat.kota;
-	cout << "\n Umur : " << mhs.umur;
-
+        cout << "Alamat Mahasiswa :" << endl;
+        cout << "\t Nama Desa :";
+        cin >> mhs[i].alamat.desa;
+        cout << "\t Nama Kota :";
+        cin >> mhs[i].alamat.kota;
+        cout << "Umur Mahasiswa :";
+        cin >> mhs[i].umur;
+        cin.ignore(1, '\n');
+        cout << endl;
+    }
+    
+    return 0;
 }
-
-
-
-
